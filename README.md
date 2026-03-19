@@ -1,7 +1,7 @@
 # vim-claude-code
 
 [![CI](https://github.com/rishi-opensource/vim-claude-code/actions/workflows/ci.yml/badge.svg)](https://github.com/rishi-opensource/vim-claude-code/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/badge/version-1.3.1-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue.svg)](CHANGELOG.md)
 
 A Vim plugin that integrates the [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI directly into your editor. Run Claude Code in a managed terminal, send code context with a single keystroke, and get automatic file reloading when Claude edits your files — all without leaving Vim.
 
@@ -33,7 +33,7 @@ A Vim plugin that integrates the [Claude Code](https://docs.anthropic.com/en/doc
 
 ## Installation
 
-> **Stable release — v1.3.1**
+> **Stable release — v1.4.0**
 > Pin to the latest stable release using the examples below, or omit the tag
 > to always track the latest commit on `main`.
 
@@ -43,7 +43,7 @@ A Vim plugin that integrates the [Claude Code](https://docs.anthropic.com/en/doc
 Plug 'rishi-opensource/vim-claude-code'
 
 " Pin to stable release
-Plug 'rishi-opensource/vim-claude-code', { 'tag': 'v1.3.1' }
+Plug 'rishi-opensource/vim-claude-code', { 'tag': 'v1.4.0' }
 ```
 
 ### [Vundle](https://github.com/VundleVim/Vundle.vim)
@@ -52,18 +52,18 @@ Plugin 'rishi-opensource/vim-claude-code'
 ```
 > Vundle does not support tag pinning. To pin manually after install:
 > ```sh
-> cd ~/.vim/bundle/vim-claude-code && git checkout v1.3.1
+> cd ~/.vim/bundle/vim-claude-code && git checkout v1.4.0
 > ```
 
 ### [pathogen](https://github.com/tpope/vim-pathogen)
 ```sh
-git clone --branch v1.3.1 https://github.com/rishi-opensource/vim-claude-code.git
+git clone --branch v1.4.0 https://github.com/rishi-opensource/vim-claude-code.git
 ```
 
 ### Native packages (Vim 8+)
 ```sh
 mkdir -p ~/.vim/pack/plugins/start
-git clone --branch v1.3.1 https://github.com/rishi-opensource/vim-claude-code.git
+git clone --branch v1.4.0 https://github.com/rishi-opensource/vim-claude-code.git
 ```
 
 ## Quick Start

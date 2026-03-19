@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/rishi-opensource/vim-claude-code/compare/v1.3.1...v1.4.0) (2026-03-19)
+
+
+### Features
+
+* add tmux-like zoom (maximize) toggle for terminal ([#23](https://github.com/rishi-opensource/vim-claude-code/issues/23)) ([f7161c6](https://github.com/rishi-opensource/vim-claude-code/commit/f7161c651a3126ae546e2f7ba5c9fd315152f6fa))
+
 ## [1.3.1](https://github.com/rishi-opensource/vim-claude-code/compare/v1.3.0...v1.3.1) (2026-03-19)
 
 
