@@ -44,7 +44,7 @@ function! s:complete(ArgLead, CmdLine, CursorPos) abort
         \ 'rename', 'optimize', 'debug', 'apply',
         \ 'chat', 'context', 'model',
         \ 'version', 'doctor',
-        \ 'preview',
+        \ 'preview', 'zoom',
         \ ]
   return filter(copy(l:subs), 'v:val =~# "^" . a:ArgLead')
 endfunction
@@ -107,6 +107,8 @@ function! s:dispatch(args) abort
     call claude_code#meta_commands#doctor()
   elseif l:sub ==# 'preview'
     call s:dispatch_preview(l:flags)
+  elseif l:sub ==# 'zoom'
+    call claude_code#terminal#zoom()
   else
     call claude_code#util#error('vim-claude-code: unknown sub-command "' . l:sub . '". Try :Claude <Tab>')
   endif
@@ -131,6 +133,11 @@ if claude_code#config#get('map_keys')
   let s:verbose_key = claude_code#config#get('map_verbose')
   if !empty(s:verbose_key)
     execute 'nnoremap <silent> ' . s:verbose_key . ' :Claude verbose<CR>'
+  endif
+
+  let s:zoom_key = claude_code#config#get('map_zoom')
+  if !empty(s:zoom_key)
+    execute 'nnoremap <silent> ' . s:zoom_key . ' :Claude zoom<CR>'
   endif
 endif
 
