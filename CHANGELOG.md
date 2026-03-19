@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/rishi-opensource/vim-claude-code/compare/v1.3.0...v1.3.1) (2026-03-19)
+
+
+### Bug Fixes
+
+* align python diff trigger naming with vimscript expectations ([#21](https://github.com/rishi-opensource/vim-claude-code/issues/21)) ([97f29b6](https://github.com/rishi-opensource/vim-claude-code/commit/97f29b675f7342da90855ede6f866c32b2ad2a08))
+
 # [1.3.0](https://github.com/rishi-opensource/vim-claude-code/compare/v1.2.0...v1.3.0) (2026-03-19)
 
 
