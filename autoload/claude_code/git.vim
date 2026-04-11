@@ -19,18 +19,16 @@ function! claude_code#git#root() abort
     return s:git_root_cache[l:cwd]
   endif
 
-  let s:output_redirect = ' 2>/dev/null'
-  if has("win32")
-    let s:output_redirect = ' 2>nul'
-  endif
+  let l:null = has('win32') ? 'nul' : '/dev/null'
+  let l:redirect = ' 2>' . l:null
 
-  let l:inside = system('git -C ' . shellescape(l:cwd) . ' rev-parse --is-inside-work-tree' . s:output_redirect)
+  let l:inside = system('git -C ' . shellescape(l:cwd) . ' rev-parse --is-inside-work-tree' . l:redirect)
   if v:shell_error || trim(l:inside) !=# 'true'
     let s:git_root_cache[l:cwd] = ''
     return ''
   endif
 
-  let l:root = trim(system('git -C ' . shellescape(l:cwd) . ' rev-parse --show-toplevel' . s:output_redirect))
+  let l:root = trim(system('git -C ' . shellescape(l:cwd) . ' rev-parse --show-toplevel' . l:redirect))
   if v:shell_error
     let s:git_root_cache[l:cwd] = ''
     return ''

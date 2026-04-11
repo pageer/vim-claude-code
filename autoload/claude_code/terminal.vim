@@ -145,16 +145,36 @@ function! s:instance_cwd(instance_id) abort
     return ''
   endif
   " Normalise both sides to forward slashes for a reliable comparison.
-  let l:inst = substitute(a:instance_id, '\\', '/', 'g')
-  let l:cwd  = substitute(getcwd(),      '\\', '/', 'g')
+  let l:inst = tr(a:instance_id, '\', '/')
+  let l:cwd  = tr(getcwd(),      '\', '/')
   if l:inst ==# l:cwd
     return ''
   endif
   " Return an OS-native path so term_start's cwd option works on all platforms.
   if has('win32')
-    return substitute(a:instance_id, '/', '\\', 'g')
+    return tr(a:instance_id, '/', '\')
   endif
   return a:instance_id
+endfunction
+
+" Paste from system clipboard into the terminal buffer.
+" Bypasses terminal mappings using term_sendkeys().
+function! claude_code#terminal#paste() abort
+  let l:bnr = bufnr('%')
+  if getbufvar(l:bnr, '&buftype') !=# 'terminal'
+    return
+  endif
+
+  " Use + register (system clipboard) if available, fallback to * or default.
+  let l:reg = has('clipboard') ? '+' : '"'
+  let l:text = getreg(l:reg)
+  if empty(l:text) && l:reg == '+'
+    let l:text = getreg('*')
+  endif
+
+  if !empty(l:text)
+    call term_sendkeys(l:bnr, l:text)
+  endif
 endfunction
 
 " Create a brand-new Claude Code terminal.

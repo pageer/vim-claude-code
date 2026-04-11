@@ -91,7 +91,8 @@ function! claude_code#meta_commands#version() abort
         \ ]
 
   if executable('claude')
-    let l:cli_ver = trim(system('claude --version 2>/dev/null'))
+    let l:null = has('win32') ? 'nul' : '/dev/null'
+    let l:cli_ver = trim(system('claude --version 2>' . l:null))
     if v:shell_error || empty(l:cli_ver)
       let l:cli_ver = '(could not determine)'
     endif
