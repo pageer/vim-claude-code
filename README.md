@@ -1,7 +1,7 @@
 # vim-claude-code
 
 [![CI](https://github.com/rishi-opensource/vim-claude-code/actions/workflows/ci.yml/badge.svg)](https://github.com/rishi-opensource/vim-claude-code/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/badge/version-1.4.0-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.4.1-blue.svg)](CHANGELOG.md)
 
 **AI-powered coding, inside Vim. No context switching.**
 
@@ -55,7 +55,7 @@ Most AI coding tools pull you out of your editor — into a browser, a chat wind
 
 ## Installation
 
-> **Stable release — v1.4.0**
+> **Stable release — v1.4.1**
 > Pin to the latest stable release using the examples below, or omit the tag to always track `main`.
 
 ### [vim-plug](https://github.com/junegunn/vim-plug)
@@ -64,7 +64,7 @@ Most AI coding tools pull you out of your editor — into a browser, a chat wind
 Plug 'rishi-opensource/vim-claude-code'
 
 " Pin to stable release
-Plug 'rishi-opensource/vim-claude-code', { 'tag': 'v1.4.0' }
+Plug 'rishi-opensource/vim-claude-code', { 'tag': 'v1.4.1' }
 ```
 
 ### [Vundle](https://github.com/VundleVim/Vundle.vim)
@@ -73,18 +73,18 @@ Plugin 'rishi-opensource/vim-claude-code'
 ```
 > Vundle does not support tag pinning. To pin manually after install:
 > ```sh
-> cd ~/.vim/bundle/vim-claude-code && git checkout v1.4.0
+> cd ~/.vim/bundle/vim-claude-code && git checkout v1.4.1
 > ```
 
 ### [pathogen](https://github.com/tpope/vim-pathogen)
 ```sh
-git clone --branch v1.4.0 https://github.com/rishi-opensource/vim-claude-code.git ~/.vim/bundle/vim-claude-code
+git clone --branch v1.4.1 https://github.com/rishi-opensource/vim-claude-code.git ~/.vim/bundle/vim-claude-code
 ```
 
 ### Native packages (Vim 8+)
 ```sh
 mkdir -p ~/.vim/pack/plugins/start
-git clone --branch v1.4.0 https://github.com/rishi-opensource/vim-claude-code.git ~/.vim/pack/plugins/start/vim-claude-code
+git clone --branch v1.4.1 https://github.com/rishi-opensource/vim-claude-code.git ~/.vim/pack/plugins/start/vim-claude-code
 ```
 
 ## Quick Start

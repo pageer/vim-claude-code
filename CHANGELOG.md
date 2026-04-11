@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/rishi-opensource/vim-claude-code/compare/v1.4.0...v1.4.1) (2026-04-11)
+
+
+### Bug Fixes
+
+* re-apply paste fix and unify with Windows improvements ([c96a017](https://github.com/rishi-opensource/vim-claude-code/commit/c96a01769ee906f9c335b6bdf1a3c57d73e51627))
+
 # [1.4.0](https://github.com/rishi-opensource/vim-claude-code/compare/v1.3.1...v1.4.0) (2026-03-19)
 
 
